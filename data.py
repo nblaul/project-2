@@ -14,14 +14,14 @@ def update_data():
     
     # Declare the collection
     data = db.data
-    cursor = db.data.find({})
+    cursor = db.salary.find({})
     with open('data_salary.json', 'w') as file:
         json.dump(json.loads(dumps(cursor)), file)   
 
 
     # Declare the collection
     lang_pct = db.lang_pct
-    cursor = db.lang_pct.find({})
+    cursor = db.percent.find({})
     with open('lang_pct.json', 'w') as file:
         json.dump(json.loads(dumps(cursor)), file)
 

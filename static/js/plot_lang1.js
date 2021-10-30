@@ -4,10 +4,16 @@ function buildChart(selection) {
         var data = importedData;
         var resultsArray = data.filter(survey => 
             survey.language == selection);
-        var year = resultsArray.map(survey => survey.survey_year);
-        var percentage = resultsArray.map(survey => survey.percentage);
-        
-        year.sort();
+            console.log(resultsArray);
+        var sortArray = resultsArray.sort(function(a,b) {
+            return a.survey_year - b.survey_year;
+        });
+        console.log(sortArray);
+        var year = sortArray.map(survey => survey.survey_year);
+        var percentage = sortArray.map(survey => survey.percentage);
+
+        // year.sort();
+        console.log(selection);
         console.log(year);
         console.log(percentage);
 
@@ -16,7 +22,6 @@ function buildChart(selection) {
                 y: percentage,
                 x: year,
                 type: "scatter",
-                
             }
         ];
 
@@ -28,6 +33,8 @@ function buildChart(selection) {
                 range: [2010, 2022],
                 title: "Year",
                 dtick: 1,
+                x: "date"
+            
 
             },
             yaxis: {
@@ -44,9 +51,9 @@ function init() {
 
     d3.json("../../lang_pct.json").then(function(importedData) {
         var data = importedData;
-        console.log(data);
+        // console.log(data);
         var result = data.map(survey => survey.language);
-        console.log(result);
+        // console.log(result);
         
         function onlyUnique(value, index, self) {
             return self.indexOf(value) === index;
@@ -54,17 +61,17 @@ function init() {
     
         var languages = result.filter(onlyUnique);
         languages.sort()
-        console.log(languages);
+        // console.log(languages);
         var selector = d3.select("#selDataset");
         languages.forEach(language => {
             selector
                 .append("option")
                 .text(language)
                 .property("value", language);
-                console.log(language);
+                // console.log(language);
         });
 
-        const firstData = languages[0];
+        const firstData = languages[9];
         console.log(firstData);
         buildChart(firstData);
     
@@ -74,6 +81,7 @@ function init() {
     function optionChanged(newData) {
         buildChart(newData);
     }
+    
 
 init();
 

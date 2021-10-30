@@ -6,6 +6,7 @@ function buildChart(selection) {
             survey.language == selection);
         var year = resultsArray.map(survey => survey.survey_year);
         var percentage = resultsArray.map(survey => survey.percentage);
+        
         year.sort();
         console.log(year);
         console.log(percentage);

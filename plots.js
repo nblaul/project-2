@@ -43,12 +43,18 @@ d3.json("data_salary.json").then((importedData) => {
     // Apply the group bar mode to the layout
     var layout = {
       title: "Salary by Language (2021)",
+      autosize: false,
+      width: 500,
+      height: 1000,
       margin: {
         l: 100,
-        r: 100,
+        r: 50,
+        b: 100,
         t: 100,
-        b: 100
-      }
+        pad: 4
+      },
+      // paper_bgcolor: '#7f7f7f',
+      plot_bgcolor: '#c7c7c7'
     };
   
     // Render the plot to the div tag with id "plot"

@@ -141,17 +141,23 @@ console.log(salary4);
       };  
 
     // data
-    var chartData = [trace1,trace2,trace3,trace4,trace5];
+    var chartData = [trace1,trace3,trace4,trace5,trace2];
   
     // Apply the group bar mode to the layout
     var layout = {
       title: "Avg Salary by Year (2017-2021)",
+      autosize: false,
+      width: 500,
+      height: 1000,
       margin: {
         l: 100,
-        r: 100,
+        r: 50,
+        b: 100,
         t: 100,
-        b: 100
-      }
+        pad: 4
+      },
+      // paper_bgcolor: '#7f7f7f',
+      plot_bgcolor: '#c7c7c7'
     };
   
     // Render the plot to the div tag with id "plot"

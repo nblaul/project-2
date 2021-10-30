@@ -1,6 +1,6 @@
 // Use D3 fetch to read the JSON file
 // The data from the JSON file is arbitrarily named importedData as the argument
-d3.json("data_salary.json").then((importedData) => {
+d3.json("../data_salary.json").then((importedData) => {
     console.log(importedData);
     var data = importedData;
   // 2021 data
@@ -147,7 +147,7 @@ console.log(salary4);
     var layout = {
       title: "Avg Salary by Year (2017-2021)",
       autosize: false,
-      width: 500,
+      width: 1000,
       height: 1000,
       margin: {
         l: 100,

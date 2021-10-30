@@ -1,12 +1,12 @@
 
 function buildChart(selection) {
-    d3.json("lang_pct.json").then(importedData => {
+    d3.json("../../lang_pct.json").then(importedData => {
         var data = importedData;
         var resultsArray = data.filter(survey => 
             survey.language == selection);
         var year = resultsArray.map(survey => survey.survey_year);
         var percentage = resultsArray.map(survey => survey.percentage);
-        
+        year.sort();
         console.log(year);
         console.log(percentage);
 
@@ -15,7 +15,7 @@ function buildChart(selection) {
                 y: percentage,
                 x: year,
                 type: "scatter",
-                // orientation: "h"
+                
             }
         ];
 
@@ -25,7 +25,9 @@ function buildChart(selection) {
             title: "Popularity Percentage of Language by Year",
             xaxis: {
                 range: [2010, 2022],
-                title: "Year"
+                title: "Year",
+                dtick: 1,
+
             },
             yaxis: {
                 title: "Percentage Use",
@@ -39,11 +41,12 @@ function buildChart(selection) {
 
 function init() {
 
-    d3.json("lang_pct.json").then(function(importedData) {
+    d3.json("../../lang_pct.json").then(function(importedData) {
         var data = importedData;
         console.log(data);
         var result = data.map(survey => survey.language);
         console.log(result);
+        
         function onlyUnique(value, index, self) {
             return self.indexOf(value) === index;
         }

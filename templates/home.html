@@ -1,0 +1,255 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackoverflow - Data Analysis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <style>
+    section{
+      padding: 60px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-md navbar-light pt-5 pb-4">
+    <div class="container-xxl">
+      <!-- navbar brand / title -->
+      <a class="navbar-brand" href="#intro">
+        <span class="text-secondary fw-bold">
+          Project 2 - Analysis of Stackoverflow Developer Survey 2011-2021
+        </span>
+      </a>
+      <!-- toggle button for mobile nav -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- navbar links -->
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="chart1.html">Language Usage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="chart2.html">Languages by Salary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="chart3.html">Popular Languages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="chart4.html">Top Languages</a>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main image & intro text -->
+  <section id="intro">
+    <div class="container-lg">
+    
+    </style>
+      <div class="row g-4 justify-content-center align-items-center">
+        <div class="col-md-5 text-center text-md-start">
+          <h1>
+            <div class="display-5">Coding 2011-2021</div>
+            <div class="display-6 text-muted">Past and Future of Coding</div>
+          </h1>
+          <p class="lead my-4 text-muted">Team America analyzed 10 years of stack overflow data to identify trends in the popularity of coding languages and salary information</p>
+          </div>
+        <div class="col-md-5 text-center d-none d-md-block">
+          <img src="data:image/jpeg;base64,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" class="img-fluid" alt="man coding">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- picture links to charts -->
+  <section id="analysis" class="mt-5" style="background-color: #a7c0cd;">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Quantitative Analysis</h2>
+        <p class="lead text-bold">Changes in popularity and salary of coding languages</p>
+      </div>
+      <div class="container">
+
+        <h3 class="text-sm-center"></h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="thumbnail">
+                <a href="chart1.html"> 
+              <img
+                src="LU-BC.jpg"
+                alt="first chart" class="img-thumbnail", width="450", height="450"></img>
+            </div>
+            <div class="caption">
+              <h3>Language Usage</h3>
+              <a href="chart1.html"></a> 
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="thumbnail">
+                <a href="chart2.html"> 
+                <img
+                src="salary.jpeg"
+                alt="chart one image" class="img-thumbnail", width="450", height="450"></img>
+            </div> 
+            <div class="caption">
+              <a href="chart2.html"><h3>Salary Over Time</h3></a>   
+            </div>
+          </div>
+          </div>
+          <div, class=row>
+          <div class="col-md-6">
+            <div class="thumbnail">
+              <a href="chart3.html"> 
+              <img
+                src="https://cdn.pixabay.com/photo/2016/11/27/21/42/stock-1863880_960_720.jpg"
+                alt="cloud picture" class="img-thumbnail", width="450", height="450">
+            </div>
+            <div class="caption">
+              <h3>Language Popularity</h3>
+              <a href="chart3.html"></a> 
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="thumbnail">
+               <a href="chart4.html"> 
+              <img
+                src="https://cdn.pixabay.com/photo/2016/11/27/21/42/stock-1863880_960_720.jpg"
+                alt="windy picture" class="img-thumbnail", width="450", height="450">
+            </div>
+            <div class="caption">
+              <h3>Top Languages</h3>
+              <a href="chart4.html"></a> 
+            </div>
+          </div> 
+  </div>
+  </section>
+
+  <!-- topics at a glance -->
+  <section id="topics">
+    <div class="container-md">
+      <div class="text-center">
+        <h2>Data Science Methodology and Approach</h2>
+        </div>
+      
+          <!-- accordion -->
+          <div class="accordion" id="chapters">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-1" aria-expanded="true" aria-controls="chapter-1">
+                  Data Selection and Cleaning Process
+                </button>
+              </h2>
+              <div id="chapter-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  <p> Initially we searched for salary and skill data.  We found the Stack Overflow annual survey.  Our goal was
+                    to determine hich coding languages are the most popular.  We found available data from 2011-2021.
+                    The data was interesting and offered information on tools and languages.</p>  
+                  <p> We wanted to determine:
+                    <ul style="list-style-type:disc;">
+                      <li>What languages people are learning</li>
+                      <li>How language use has changed overtime</li>
+                      <li>How language knowledge affects salary.</li>
+                      <li>How displaying similar data in different charts effects meaning</li>
+                      <li>Data was available across each year.</li></ul></p>
+                  <p> Cleaning Process:
+                    <ul style="list-style-type:disc;">
+                      <li> Most time consuming part of the process</li>
+                      <li>Summarize data by year</li>
+                      <li>Survey format was different for each year</li>
+                      <li>Extensive work was needed to create comprable data sets</li></ul></p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-2" aria-expanded="false" aria-controls="chapter-2">
+                  Description of Workflow
+                </button>
+              </h2>
+              <div id="chapter-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  <p> Initial setup:
+                    <ul style="list-style-type:disc;">
+                      <li>Data not dynamic</li>
+                      <li>Complex, annual data</li>
+                      <li>No requirement for automation.</li>
+                      <li>Used python to concatenate yearly data for salary and percent use and remove spaces.   </li>
+                      <li>Uploaded one db, two collections to MongoDB</li>
+                      </ul></p>
+                  <p> Basic Flask App Creation:
+                    <ul style="list-style-type:disc;">
+                      <li> Most time consuming part of the process</li>
+                      <li>Summarize data by year</li>
+                      <li>Survey format was different for each year</li>
+                      <li>Extensive work was needed to create comparable data sets</li></ul></p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-3" aria-expanded="false" aria-controls="chapter-1">
+                  Web Development
+                </button>
+              </h2>
+              <div id="chapter-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  <p> Bootstrap Components:
+                    <ul style="list-style-type:disc;">
+                      <li>Menu</li>
+                      <li>Cards</li>
+                      <li>Accordion</li>
+                      <li>Layout/container</li>
+                      </ul></p>
+                  <p> Anime.js:
+                    <ul style="list-style-type:disc;">
+                      <li> JS library designed for animation</li></ul>
+                      </p>
+                  <p> Web Structure:
+                    <ul style="list-style-type:disc;">
+                      <li> Highlights four charts</li>
+                      <li> Provides overview of methodology</li>
+                      <li> Links to each of the four charts</li>
+                      <li> Chart tour or navigation links</li>
+                    </ul>
+                      </p>
+                  <p> Chart pages:
+                    <ul style="list-style-type:disc;">
+                    <li> Separate javascript files for charts</li></ul>
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-4" aria-expanded="false" aria-controls="chapter-4">
+                  Database and Chart Creation
+                </button>
+              </h2>
+              <div id="chapter-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  <p> Data for charts:
+                    <ul style="list-style-type:disc;">
+                    <li> JSON file output or Mongo DB</li></ul>
+                    </p>
+                </div>
+              </div>
+            </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

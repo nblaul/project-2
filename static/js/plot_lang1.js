@@ -71,7 +71,7 @@ function init() {
                 // console.log(language);
         });
 
-        const firstData = languages[9];
+        const firstData = languages[0];
         console.log(firstData);
         buildChart(firstData);
     

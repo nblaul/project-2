@@ -43,7 +43,7 @@ function runEnter() {
                 .attr("width", width)
                 .attr("height", height)
     
-    d3.json("lang_pct.json", function(data) {
+    d3.json("static/lang_pct.json", function(data) {
 
         console.log(test)
 

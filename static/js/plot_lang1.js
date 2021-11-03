@@ -1,6 +1,6 @@
 
 function buildChart(selection) {
-    d3.json("../../lang_pct.json").then(importedData => {
+    d3.json("static/lang_pct.json").then(importedData => {
         var data = importedData;
         var resultsArray = data.filter(survey => 
             survey.language == selection);
@@ -49,7 +49,7 @@ function buildChart(selection) {
 
 function init() {
 
-    d3.json("../../lang_pct.json").then(function(importedData) {
+    d3.json("static/lang_pct.json").then(function(importedData) {
         var data = importedData;
         // console.log(data);
         var result = data.map(survey => survey.language);

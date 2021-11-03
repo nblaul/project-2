@@ -1,6 +1,6 @@
 // Use D3 fetch to read the JSON file
 // The data from the JSON file is arbitrarily named importedData as the argument
-d3.json("../data_salary.json").then((importedData) => {
+d3.json("static/data_salary.json").then((importedData) => {
     console.log(importedData);
     var data = importedData;
   // 2021 data
